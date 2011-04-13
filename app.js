@@ -15,6 +15,7 @@ app.configure(function(){
   app.use(express.static(__dirname+'/public'));
   app.use(stylus.middleware({src: __dirname + '/public'}));
   app.set("view options",{layout: false});
+
 });
 
 app.get('/', function(req, res){
@@ -47,7 +48,12 @@ app.post('/upload', function(req,res){
 
 });
 app.get('/setup', function(req,res){
-  res.render('setup');
+  var sections = [{title: "News"}, {title: "Sports"}, {title: "Editorial"}, {title: "Recess"}, {title: "Towerview"}];
+  res.render('setup'{
+              locals: {
+            sections: sections
+  }
+  });
 });
 
 
