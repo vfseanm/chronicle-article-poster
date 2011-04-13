@@ -14,6 +14,7 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname+'/public'));
   app.use(stylus.middleware({src: __dirname + '/public'}));
+  app.set("view options",{layout: false});
 });
 
 app.get('/', function(req, res){
@@ -45,6 +46,11 @@ app.post('/upload', function(req,res){
   });
 
 });
+app.get('/setup', function(req,res){
+  res.render('setup');
+});
+
+
 
 
 
