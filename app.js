@@ -49,7 +49,7 @@ app.post('/upload', function(req,res){
 });
 app.get('/setup', function(req,res){
   var sections = [{title: "News"}, {title: "Sports"}, {title: "Editorial"}, {title: "Recess"}, {title: "Towerview"}];
-  res.render('setup'{
+  res.render('setup',{
               locals: {
             sections: sections
   }
