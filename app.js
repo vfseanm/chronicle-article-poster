@@ -51,6 +51,7 @@ app.get('/setup', function(req,res){
   var sections = [{title: "News"}, {title: "Sports"}, {title: "Editorial"}, {title: "Recess"}, {title: "Towerview"}];
   res.render('setup',{
               locals: {
+                name: "Setup Page",
             sections: sections
   }
   });
