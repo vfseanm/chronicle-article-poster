@@ -57,7 +57,7 @@ function getxml(folder){
 				getxml(file);
 			});
 		});
-	}
+	}				  // put in a catch for non-xml
 	toparse(folder);  // if folder is not a directory, parse it
 };
 
